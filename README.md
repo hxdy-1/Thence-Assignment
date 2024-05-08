@@ -16,3 +16,7 @@ npm install
 npm run dev
 ```
 
+## For reviewing the project:
+- I have utilized Next.js which is known as best React.js framework for faster websites **(still uses react though).**
+- I have used raw **CSS for animations** along with Tailwind CSS for ease of development and better UI.
+- I have coded this on a 15 inch screen so it will look **pixel perfect** on the same.
