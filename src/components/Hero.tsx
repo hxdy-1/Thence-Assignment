@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Hero_Image from "../../public/Hero-image.png";
+import HeroImage from "../../public/Hero-image.png";
 import AchievedReductionCard from "./AchievedReductionCard";
 import StaffDeploymentCard from "./StaffDeploymentCard";
 import ExpensesReductionCard from "./ExpensesReductionCard";
@@ -9,15 +9,16 @@ import RightArrow from "../../public/RightArr.svg";
 import Carousel from "./Carousel";
 
 const slides = [
-	<div className="h-64">
-		Enhance fortune 50 company's insights teams research capabilities
+	<div key={1} className="h-64">
+		Enhance fortune 50 company&apos;s insights teams research capabilities
 	</div>,
-	<div className="h-64">
-		Strengthen Fortune 50 enterprise's data analytics division's research
-		acumen.
+	<div key={2} className="h-64">
+		Strengthen Fortune 50 enterprise&apos;s data analytics division&apos;s
+		research acumen.
 	</div>,
-	<div className="h-64">
-		Boost multinational conglomerate's strategic insights team proficiency.
+	<div key={3} className="h-64">
+		Boost multinational conglomerate&apos;s strategic insights team
+		proficiency.
 	</div>,
 ];
 
@@ -27,7 +28,7 @@ const Hero = () => {
 			<div className="hero-image relative">
 				<Image
 					className="rounded-[40px]"
-					src={Hero_Image}
+					src={HeroImage}
 					alt="Hero image"
 				/>
 				<AchievedReductionCard />

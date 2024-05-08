@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 const Carousel: React.FC<{ slides: JSX.Element[] }> = ({ slides }) => {
 	const [currentSlide, setCurrentSlide] = useState<number>(0);
@@ -8,15 +8,15 @@ const Carousel: React.FC<{ slides: JSX.Element[] }> = ({ slides }) => {
 		setCurrentSlide(index);
 	};
 
-	const nextSlide = () => {
+	const nextSlide = useCallback(() => {
 		const nextIndex = (currentSlide + 1) % slides.length;
 		setCurrentSlide(nextIndex);
-	};
+	}, [currentSlide, slides.length]);
 
 	useEffect(() => {
 		const interval = setInterval(nextSlide, 4000);
 		return () => clearInterval(interval);
-	}, [currentSlide]);
+	}, [currentSlide, nextSlide]);
 
 	return (
 		<div className="relative overflow-hidden w-full">
